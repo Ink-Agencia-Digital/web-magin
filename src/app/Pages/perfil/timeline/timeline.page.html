@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar class="ion-toolbar-ccs">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button defaultHref="/users/perfil"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="tituloInfo logo">
+      <label style="color: white;">MAGIN</label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div>
+    <div style="color: black;">
+      <div style="margin-top: 10px;text-align: center;">
+        <ion-badge class="title">Mi linea de tiempo</ion-badge>
+      </div>
+      <div *ngIf="timeline.length > 0">
+        <ul class="timeline">
+          <div *ngFor="let contenido of timeline">
+            <!--Posts-->
+            <li class="timeline__item" *ngIf="contenido.type === 1">
+              <div class="timeline__step">
+                <div class="timeline__step__marker timeline__step__marker--red">
+                  <ion-icon name="chatbox-outline" style="width: 30px;height: 46px;color: white;margin-bottom: -8px;"></ion-icon>
+                </div>
+              </div>
+              <div class="timeline__time" [ngClass]="{
+                'content-challenge': contenido.comment[0] == '#',
+                'content-inform': contenido.comment[0] == '!',
+                'content-share': contenido.comment[0] == '@'}">
+                {{ contenido.date | date:'short'}}
+              </div>
+              <div class="timeline__content">
+                <div *ngIf="contenido.comment[0] == '@'" class="timeline__title content-timeline">
+                  <label class="content label-share">{{ contenido.comment | slice:0:10 }}</label>
+                  <label class="">{{ contenido.comment | slice:10:contenido.comment.length | capitalize }}</label>
+                </div>       
+                <div *ngIf="contenido.comment[0] == '#'" class="timeline__title content-timeline">
+                  <label class="content label-challenge">{{ contenido.comment | slice:0:6 }}</label>
+                  <label>{{ contenido.comment | slice:6:contenido.comment.length | capitalize }}</label>
+                </div>
+                <div *ngIf="contenido.comment[0] == '!'" class="timeline__title content-timeline">
+                  <label class="content label-inform">{{ contenido.comment | slice:0:9 }}</label>
+                  <label>{{ contenido.comment | slice:9:contenido.comment.length | capitalize }}</label>
+                </div>
+              </div>
+            </li>
+            <!--Feelings-->
+            <li class="timeline__item" *ngIf="contenido.type === 2">
+              <div class="timeline__step">
+                <div class="timeline__step__marker timeline__step__marker--red">
+                  <ion-icon name="heart-circle-outline" style="width: 30px;height: 46px;color: white;margin-bottom: -8px;"></ion-icon>
+                </div>
+              </div>
+              <div class="timeline__time content-feeling">
+                {{ contenido.date | date:'short'}}
+              </div>
+              <div class="timeline__content">
+                <div class="timeline__title content-timeline">
+                  <label class="label-feeling">{{ contenido.comment | capitalize }}</label>
+                </div>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div *ngIf="timeline.length === 0" style="text-align: center;margin-top: 15px;">
+        <ion-badge color="warning">No existen datos para el timeline</ion-badge>
+      </div>
+    </div>
+    <ion-infinite-scroll threshold="10%" position="center" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

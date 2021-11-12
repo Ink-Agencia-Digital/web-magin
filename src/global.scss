@@ -1,0 +1,451 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.ion-content-login{
+  //--ion-background-color:linear-gradient(rgba(255,255,255), rgba(253,202,85) );
+  //--ion-background-color: #002a68;
+  //--ion-background-color: linear-gradient(123deg, #002a68 0%, #80b9f6 53%, #0041a2 100%);
+  font-family: url(../src/assets/fonts/proxima/proxima-nova.otf);
+  font-style: sans-serif;
+  --background: url(/assets/magin-fondo.jpg) 0 0/100% 100% no-repeat;
+}
+
+.ion-content-principal {
+  //--ion-background-color:linear-gradient(rgba(255,255,255), rgba(253,202,85) );
+  //--ion-background-color: #002a68;
+  //--ion-background-color: linear-gradient(123deg, #002a68 0%, #80b9f6 53%, #0041a2 100%);
+}
+
+#ion-content-opcional{
+  //--ion-background-color:linear-gradient(rgba(255,255,255), rgba(253,202,85) );
+  //--ion-background-color: #002a68;
+  //--ion-background-color: linear-gradient(123deg, #002a68 0%, #80b9f6 53%, #0041a2 100%);
+  --background: white  0 0/100% 100% no-repeat;
+  text-align-last: center;
+}
+
+
+.my-custom-class{
+  --background: url(/assets/imagenesDiagnostico/img1.jpeg) 0 0/100% 100% no-repeat;
+}
+
+.buttonCss{
+  color: rgba(253, 253, 253, 0.904) !important;
+}
+
+.ion-toolbar-ccs {
+  --background: white 0 0/100% 100% no-repeat;
+  border-bottom-right-radius:  0px;
+  border-bottom-left-radius: 0px;
+}
+
+.titlePadding{
+  margin-left: 5%;
+}
+  
+
+.tituloInfo {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0 19px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+  }
+
+  .color-blue{
+    color: #002a68;
+  }
+
+  .color-white-p{
+    color: #ffffff;
+  }
+
+  .color-white-s{
+    color: #c2c3c5;
+  }
+
+  .modal-wrapper{
+    background: transparent !important;
+}
+
+  .my-class .mat-dialog-container{
+    border-radius: 10px;
+    background: rgb(46, 105, 184);
+    color: #faf4f4;
+  }
+
+   
+  .my-class .mat-raised-button{
+    border-radius: 10px;
+    background: rgb(45, 59, 88);
+    color: #faf9f9;
+  }
+
+  
+  .my-class .matInput{
+    border-radius: 10px;
+    background: rgb(19, 18, 18);
+    color: #050505;
+  }
+
+  .my-class .mat-form-field.mat-focused .mat-form-field-label {
+    color: #ffffff !important;
+  }
+
+  .my-class .mat-form-field.mat-underline .mat-form-field-label {
+    color: #ffffff !important;
+  }
+
+  .my-class .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    background-color: #ffffff !important;
+  }
+  
+.icon {
+    padding: initial;
+    width: 90px;
+    height: 90px;
+  }
+
+  .my-custom-class {
+    --background: #ffffffbd;
+}
+
+.my-custom-class2 {
+    --background: #fdfcfcc7;
+}
+
+.my-customback{
+  --background: url(/assets/imagenesDiagnostico/img1.jpeg) 0 0/100% 100% no-repeat;
+  --width: 100%;
+  --height: 100%;
+  --min-width: 90%;
+}
+
+.my-custombackentrena{
+  --background: url(/assets/slidesImg/img1.jpg) 0 0/100% 100% no-repeat;
+  --width: 100%;
+  --height: 100%;
+  --min-width: 90%;
+}
+
+.alert-message.sc-ion-alert-md {
+  max-height: 540px;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
+
+
+.alert-button-inner.sc-ion-alert-md{
+  font-size: 18px; 
+  color: rgb(0, 0, 0); 
+  font-family: url(../src/assets/fonts/proxima/proxima-nova.otf); 
+}
+
+.my-customback1{
+  --background: url(/assets/imagenesDiagnostico/img2.jpeg) 0 0/100% 100% no-repeat;
+  --width: 100%;
+  --height: 100%;
+  --min-width: 90%;
+}
+
+.my-customback2{
+  --background: url(/assets/imagenesDiagnostico/img3.jpeg) 0 0/100% 100% no-repeat;
+  --width: 100%;
+  --height: 100%;
+  --min-width: 90%;
+}
+.head-img1{
+  background:#a0afc7;
+
+}
+
+.my-custombackInicio{
+  --background: url(/assets/imagenesVar/deslizaDerecha.gif) 50% 40px no-repeat #E2E4E9;
+  --width: 100%;
+  --height: 95%;
+  --max-height:95% !important;
+  --min-width: 90%;
+}
+
+.my-customback3{
+  --background: url(/assets/imagenesDiagnostico/img4.jpeg) 0 0/100% 100% no-repeat;
+  --width: 100%;
+  --height: 100%;
+  --min-width: 90%;
+}
+
+.secondaryClose{
+  background-image: url(/assets/icon/boton-x.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  text-align: right;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background-size: 20px 70px;
+  border-top:none !important;
+  min-width: 10% !important;
+}
+
+.alert-head.sc-ion-alert-ios{
+  background: #002a68 !important;
+}
+.alert-title.sc-ion-alert-ios{
+    color:white !important;
+}
+.alert-message.sc-ion-alert-ios{
+  font-size: 15px;
+  text-align: justify;
+}
+
+@font-face {
+  font-family: 'Proxima nova';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/proxima/proxima-nova.otf');
+}
+
+.green-snackbar {
+  background: #8bc34a;
+  color: white;
+  font-size: 13px;
+}
+
+.green-snackbar button {
+  background-color: #8bc34a;
+  color: white;
+  border: none;
+}
+
+.red-snackbar {
+  background: #ff5722;
+  color: white;
+  font-size: 13px;
+}
+
+.red-snackbar button {
+  background-color: #ff5722;
+  color: white !important;
+  border: none;
+}
+
+.icon-header {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0% !important;
+  text-align: left !important;
+  padding: 0% !important;
+  font-weight: 100 !important;
+  box-shadow: none !important;
+  margin: 0px 0px -9px 0px;
+}
+
+.logo {
+  background-color: #002a68;
+}
+
+.info-header {
+  font-size: 9px !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 2px 0px !important;
+  font-weight: 100 !important;
+  text-align: initial !important;
+  text-align-last: end;
+}
+
+:host {
+  .toolbar-label {
+    --padding-top: 0px !important; 
+    --padding-start: 0px !important;
+    --padding-end: 0px !important;
+  }
+}
+
+.my-custombackInicio .alert-head.sc-ion-alert-md {
+  padding: 5px 25px;
+}
+
+.mat-h2, .mat-title, .mat-typography h2 {
+  text-transform: uppercase !important;
+}
+
+small {
+  text-transform: capitalize !important;
+}
+
+.event-detail {
+  background-color: #03a9f4;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-weight: 500;
+  width: 220px;
+  white-space: break-spaces !important;
+  text-align: center;
+  font-size: 13px;
+}
+
+.monthview-eventdetail-timecolumn {
+  width: 100px !important;
+  background-color: #ff9800;
+  margin-right: 10px;
+  padding: 3px 10px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.monthview-primary-with-event {
+  background-color: #03a9f4 !important;
+  color: white;
+}
+
+.slides-social .swiper-container-android .swiper-slide, .swiper-wrapper {
+  margin-bottom: 15px;
+}
+
+.slides-social .swiper-pagination-fraction, .slides-social .swiper-pagination-custom, .slides-social .swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 3px !important;
+}
+
+.slides-social .swiper-pagination-bullet-active {
+  background: #002a68 !important;
+}
+
+.slides-social .swiper-pagination-bullet {
+  background: #000000;
+}
+
+.searchbar-input.sc-ion-searchbar-md {
+  padding-inline-end: 20px !important;
+  font-size: 13px !important;
+  color: black !important;
+}
+
+.sc-ion-popover-md-h {
+  --width: 300px !important;
+  overflow: auto;
+}
+
+.confirm-category  {
+  background-color: #2196f3 !important;
+  border-radius: 5px !important;
+}
+.confirm-category .alert-button-inner.sc-ion-alert-md {
+  font-size: 12px;
+  color: white;
+}
+.cancel-category {
+  background-color: #f44336 !important;
+  border-radius: 5px !important;
+}
+.cancel-category .alert-button-inner.sc-ion-alert-md {
+  font-size: 12px;
+  color: white;
+}
+
+.bloque-1 {
+  color: #ffffff;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  background-color: #2196f3;
+}
+
+.bloque-2 {
+  color: #ffffff;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  background-color: #ff9800;
+}
+
+.bloque-3 {
+  color: #ffffff;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  background-color: #4caf50;
+}
+
+.bloque-4 {
+  color: #ffffff;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  background-color: #f44336;
+}
+
+.alert-head.sc-ion-alert-md+.alert-message.sc-ion-alert-md {
+  text-align: justify !important;
+}
+
+.alert-title.sc-ion-alert-md {
+  text-align-last: center !important;
+}
+
+.img-alert {
+  text-align: center  !important;
+}
+
+.coins .alert-wrapper.sc-ion-alert-md {
+  border-radius: 20px !important;
+  border-left: 6px solid #b94129;
+}
+
+.coins button.alert-button.ion-focusable.ion-activatable.sc-ion-alert-md {
+  background: #c85929;
+  padding: 10px 15px;
+}
+
+.coins span.alert-button-inner.sc-ion-alert-md {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.calendar-event-inner {
+  background-color: #2196f3 !important;
+}
+
+.expacionCss .mat-expansion-panel-body {
+  padding: 0px 0px 16px;
+}

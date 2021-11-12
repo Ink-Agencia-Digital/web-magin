@@ -1,0 +1,134 @@
+*{
+  font-family: 'Proxima Nova' !important;
+}
+.ion-item-css{
+  background-color: #f6f6f6;
+  border: 1.5px;
+  border-color: #535353;
+  border-radius: 8px;
+  color: #535353;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 5px;
+  width: 115%;
+  border: 2px solid  #f6f6f6;
+  transition: all 0.3s ease-in-out;
+  height: 45px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+
+
+ion-slides {
+    height: 100%;
+    width: 100%;
+}
+
+  .swiper-slide {
+    display: block;
+  }
+
+  .swiper-slide h2 {
+    color: #032d6a;
+    margin: 15px auto;
+    font-weight: bold;
+  }
+
+  .swiper-slide img {
+    max-height: 100%;
+    max-width: 100%;
+    pointer-events: none;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  p {
+    padding: 0px 10px;
+    font-size: 14px;
+  }
+
+  p b {
+    color: var(--ion-text-color, #000000);
+  }
+
+  .titulo{
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+.itemback{
+  color: #ffffff;
+  text-decoration: none;
+  width: 95%;
+  border-radius: 10px;
+}
+
+.buttonCss{
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 85%;
+  --background: #002a68 !important;
+}
+
+.card-profiles {
+  margin: 0;
+  border-left: 4px solid #094aa8;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.label-descriptions {
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+
+.content-descriptions {
+  padding: 5px;
+}
+
+.hr-descriptions {
+  background-color: #b5b5b5;
+}
+
+.card-1 {
+  --background: #002a68;
+}
+.card-2 {
+  --background: #80b9f6;
+}
+.card-3 {
+  --background: #0041a2;
+}
+
+.card-descriptions-1 {
+  border-left: 4px solid #002a68;
+}
+
+.card-descriptions-2 {
+  border-left: 4px solid #80b9f6;
+}
+
+.card-descriptions-3 {
+  border-left: 4px solid #0041a2;
+}
+
+.swipe-img {
+  background-image: url(../../../assets/swipe.gif);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70px;
+  box-shadow: none !important;
+  border-radius: 10px;
+  height: 180%;
+}

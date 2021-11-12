@@ -1,0 +1,254 @@
+*{
+    font-family: 'Proxima Nova' !important;
+  }
+.msg-input{
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button-start{
+    width: 60%;
+}
+
+.msg-btn{
+
+    --padding-start: 8.5em;
+    --padding-end: 0.5em;
+
+}
+
+.imgStyle{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+}
+.icon-color{
+    color:white;
+}
+.divBack{
+    background-color:#ffffff;
+    margin-top:0px ;
+}
+
+.icon-photo{
+    border-radius:50% !important;
+    margin-top: 10px;
+    height: 1.7em !important;
+    width: 1.7em !important;
+}
+
+.usernamecss{
+
+    color: #444;
+    margin: 0;
+    padding: 0px 0px 6px 0px;
+    font-size: 14px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 2px;
+    text-align: left;
+}
+
+.mensajecss{
+
+    font-size: 14px;
+    line-height: 12px;
+    margin: 0;
+    padding: 7px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.divBack{
+    background-color: rgba(248, 249, 250, 0.527);
+}
+
+.rowcss{
+    padding: 0 0 0 0;
+    align-items: center;
+}
+
+.cursoName{
+    color: #444;
+    margin: 0;
+    padding: 0px 6px 6px 0px;
+    font-size: 14px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: #002a68 10px solid;
+}
+
+.lessonName{
+    font-size: 14px;
+    line-height: 12px;
+    margin: 0;
+    padding: 7px 7px 7px 7px;
+    text-transform: initial;
+    letter-spacing: -0.1px;
+    text-transform: lowercase;
+    color: black;
+    text-align: initial;
+}
+
+.lessonName p:first-letter {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+}
+.color-text{
+    color: black;
+}
+.contentName{
+    font-size: 14px;
+    line-height: 12px;
+    margin: 0;
+    padding: 7px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+hr.dashed {
+    border-top: 3px dotted #bbb;
+}
+.contentNamedesc{
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: lowercase;
+    letter-spacing: -0.1px;
+    text-align: justify;
+    margin:20px;
+    font-weight: unset;
+}
+.button-lesson{
+    border:0px;
+}
+.lesson-content{
+    margin-left: 12%;
+}
+.child-item{
+    --ion-item-background: #f3f2f1;
+    --padding-start:  8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 2px;
+}
+
+.section{
+    --ion-item-background: #f3f2f1;
+    --padding-start:  8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 2px;
+}
+
+.section-active{
+    --ion-item-background: linear-gradient(162deg, rgba(114, 150, 247, 0.836) 20%, rgba(33, 65, 153, 0.712) 100%),url(/assets/img-back.jpg) 0 0/100% 100% no-repeat;;
+    --padding-start:  8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 2px;
+}
+
+.lecciones-active{
+    --ion-item-background: linear-gradient(162deg, rgba(114, 150, 247, 0.541) 20%, rgba(33, 65, 153, 0.589) 100%),url(/assets/img-back.jpg) 0 0/100% 100% no-repeat;;
+    --padding-start:  8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 2px;
+}
+
+.itemCssF{
+    --background: var(--ion-item-background, var(--ion-background-color, #f3f2f279)) !important;
+}
+
+.semi-circulo-2 {
+    width: 30px; 
+    height: 60px; 
+    position: absolute;
+    -moz-border-radius: 0 100px 100px 0;
+    -webkit-border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
+}
+
+.list-md {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: var(--ion-item-background, var(--ion-background-color, #f9f9f900));
+}
+
+.title-gen{
+    display: contents;
+}
+
+.ion-item-css{
+    background-color: #f6f6f685;
+    border: none;
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid  #ffffff79;
+    transition: all 0.3s ease-in-out;
+    height: 55px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    --background: rgba(255, 255, 255, 0.562) !important;
+    }
+
+    .title-css{
+        text-align: center;
+        color: rgb(8, 8, 8);
+        padding: 0px 0px 6px 0px;
+        font-size: 16px;
+        line-height: 44px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
+    .Subtitle-css{
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0;
+        letter-spacing: 1px;
+        color: rgb(8, 8, 8);
+        text-align: justify;
+        text-transform: capitalize;
+        font-weight: normal;
+    }
+     
+    .title-gen{
+        display: contents;
+    }
+    .title-cat{
+        text-transform: uppercase;
+        text-align:center;
+        margin:0 0 1px;
+       
+    }
+    .title-emb p{
+        text-transform: lowercase;
+        text-align:center;
+        font-size: 16px;
+        
+    }
+
+.badge-go {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 9px;
+    font-weight: 500;
+}

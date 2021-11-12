@@ -1,0 +1,221 @@
+*{
+  font-family: 'Proxima Nova' !important;
+}
+/* Timeline
+ */
+.timeline {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 0 22px;
+  margin: 0;
+  list-style: none;
+}
+.timeline::before {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  padding-right: 8px;
+  border-right: 2px solid #c3c3c3;
+  content: "";
+}
+.timeline__item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  padding: 8px 0;
+  text-align: center;
+}
+.timeline__step {
+  padding-right: 8px;
+}
+.timeline__step__marker {
+  position: relative;
+  display: table-cell;
+  height: 24px;
+  min-height: 24px;
+  width: 24px;
+  min-width: 24px;
+  border: 4px solid #F2F2F2;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 0;
+}
+.timeline__step__marker--red {
+  border-color: #002a68;
+  background-color: #002a68;
+}
+.timeline__step__marker--blue {
+  border-color: #002a68;
+  background-color: #002a68;
+}
+.timeline__time {
+  padding-right: 6px;
+  font-size: 10px;
+}
+.timeline__title {
+  padding-bottom: 6px;
+  font-size: 32px;
+  text-align: center;
+}
+.timeline__points {
+  padding: 0;
+  list-style: none;
+  font-size: 24px;
+  color: #77777D;
+}
+.timeline__points > * {
+  padding: 0 0 12px 0;
+}
+
+/* For mobile!
+ */
+@media (max-width: 768px) {
+  .card {
+    max-width: 375;
+  }
+  .timeline {
+    padding: 0 15px;
+  }
+  .timeline::before {
+    padding-right: 23px;
+  }
+  .timeline__item {
+    padding: 25px 0;
+  }
+  .timeline__step {
+    padding-right: 15px;
+  }
+  .timeline__step__marker {
+    min-width: 50px;
+    border-width: 2px;
+  }
+  .timeline__time {
+    padding-right: 72px;
+    font-size: 13px;
+  }
+  .timeline__title {
+    padding-bottom: 14.85714px;
+    font-size: 15px;
+  }
+  .timeline__points {
+    font-size: 13.71429px;
+  }
+  .timeline__points > * {
+    padding-bottom: 6.85714px;
+  }
+}
+/* Display stuff
+ */
+html {
+  background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/153256/trees.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+html, body {
+  line-height: 1.5rem;
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.card {
+  background-color: white;
+  max-width: 750px;
+  margin: 0 auto;
+  height: 100%;
+  -moz-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  display: table;
+}
+
+
+.title {
+  background-color: #002a68;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.content-share {
+  border-left: 4px solid #3880ff !important;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 10px;
+  width: 135px;
+  align-self: center;
+}
+
+.content-inform {
+  border-left: 4px solid #3dc2ff !important;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 10px;
+  width: 135px;
+  align-self: center;
+}
+
+.content-challenge {
+  border-left: 4px solid #eb445a !important;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 10px;
+  width: 135px;
+  align-self: center;
+}
+
+.label-share {
+  background-color: #3880ff !important;
+}
+
+.label-inform {
+  background-color: #3dc2ff !important;
+}
+
+.label-challenge {
+  background-color: #eb445a !important;
+}
+
+.content-timeline {
+  border: 1px solid #eaeaea;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.content {
+  color: white;
+  padding: 3px 5px;
+  margin-right: 4px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.content-feeling {
+  border-left: 4px solid #ffc107 !important;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 10px;
+  width: 135px;
+  align-self: center;
+}
+
+.label-feeling {
+  background-color: #ffc107;
+  padding: 4px 10px;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+}

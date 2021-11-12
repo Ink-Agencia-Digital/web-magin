@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar class="ion-toolbar-ccs">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/users/perfil" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="tituloInfo logo">
+      <label style="color: white;">MAGIN</label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card style="margin: 0;">
+    <ion-card-header style="padding: 10px 0px;">
+      <ion-card-title class="subtitle" style="text-align: center;font-size: 16px;padding: 10px;">Información General</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="padding: 0;">
+      <div *ngIf="usertk">
+        <form [formGroup]="editarForm">
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="person-outline" style="color: #737373;"></ion-icon> 
+            <ion-input name="nombre" type="text" placeholder="Nombre" formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item class='form-text-error' *ngIf="!editarForm.controls.name.valid && (editarForm.controls.name.touched || editarForm.controls.name.dirty)">
+            <ion-label>El nombre debe tener mínimo 5 caracteres</ion-label>
+          </ion-item>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="person-outline" style="color: #737373;"></ion-icon> 
+            <ion-input name="apellido" type="text" placeholder="Apellido" formControlName="lastname"></ion-input>
+          </ion-item>
+          <ion-item class='form-text-error' *ngIf="!editarForm.controls.lastname.valid && (editarForm.controls.lastname.touched || editarForm.controls.lastname.dirty)">
+            <ion-label>El Apellido debe tener mínimo 5 caracteres</ion-label>
+          </ion-item>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="call-outline" style="color: #737373;"></ion-icon>
+            <ion-input name="celular" type="text" placeholder="Teléfono" formControlName="phone"></ion-input>
+          </ion-item>
+          <ion-item class='form-text-error' *ngIf="!editarForm.controls.phone.valid && (editarForm.controls.phone.touched || editarForm.controls.phone.dirty)">
+            <ion-label>El teléfono supera el mínimo de caracteres permitido</ion-label>
+          </ion-item>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="mail-unread-outline" style="color: #737373;"></ion-icon>
+            <ion-input name="email" type="email" placeholder="Correo" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item class='form-text-error' *ngIf="!editarForm.controls.email.valid && (editarForm.controls.email.touched || editarForm.controls.email.dirty)">
+            <ion-label>El correo no es valido</ion-label>
+          </ion-item>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="calendar-outline" style="color: #737373;"></ion-icon>
+            <ion-datetime placeholder="Fecha de Nacimiento" displayFormat="YYYY/MM/DD" min="1980" max="2005" formControlName="birthday" cancelText="Cancelar" doneText="Hecho" style="width: 100%;"></ion-datetime>
+          </ion-item>
+          <ion-label class="label-info">Descríbete y cuenta a la comunidad algo sobre de ti</ion-label>
+          <div style="padding: 5px 10px;">
+            <textarea class="textArea" formControlName="description" rows="4" cols="4" maxlength="90"></textarea>
+          </div>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="school-outline" style="color: #737373;"></ion-icon>
+            <ion-input name="institution" type="text" placeholder="¿Dónde estudiaste?" formControlName="institution"></ion-input>
+          </ion-item>
+          <ion-item class='form-text-error' *ngIf="!editarForm.controls.institution.valid && (editarForm.controls.institution.touched || editarForm.controls.institution.dirty)">
+            <ion-label>La institución es incorrecta.</ion-label>
+          </ion-item>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="heart-outline" style="color: #737373;"></ion-icon>
+            <ion-select class="ion-select itemSelect select-placeholder" placeholder="Situación sentimental" formControlName="status">
+              <ion-select-option value="{{ it.situacion }}" *ngFor="let it of items">{{it.situacion}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="itemDec ion-item-css">
+            <ion-icon name="earth-outline" style="color: #737373;"></ion-icon>
+            <ion-input name="city" type="text" placeholder="¿Dónde vives?" formControlName="city"></ion-input>
+          </ion-item>
+          <ion-item class='form-text-error' *ngIf="!editarForm.controls.city.valid && (editarForm.controls.city.touched || editarForm.controls.city.dirty)">
+            <ion-label>El lugar donde vives no es valido</ion-label>
+          </ion-item>
+          <div style="margin: 15px 0px;text-align: -webkit-center;">
+            <ion-button type="submit" (click)="editar()" [disabled]="!editarForm.valid" expand="block" style="margin: 0;width: 50%;--background: #002a68;">Editar</ion-button>
+          </div>
+        </form>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,103 @@
+*{
+  font-family: 'Proxima Nova' !important;
+}
+.expand-css {
+  max-width: 900px;
+  background-color: rgba(248, 249, 250, 0.527);
+  box-shadow: none;
+}
+
+.iconDesc {
+  margin-top: 12px;
+}
+
+.cardCss {
+  --background: rgba(248, 249, 250, 0.527) !important;
+}
+
+.colum {
+  float: left;
+  margin-right: 5px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.title-css {
+  color: #080808;
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.titilExpand {
+  color: #080808;
+  font-size: 15px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.titilExpandSub {
+  olor: #807d7d;
+  font-size: 12px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.ion-item-css {
+  border: none;
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 5px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+  --background: rgba(255, 255, 255, 0.562) !important;
+}
+
+.Subtitle-css {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #080808;
+}
+
+.example-action-buttons {
+  padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.Subtitle-cs-desc {
+  font-size: 7px;
+  line-height: 12px;
+  margin: 0;
+  padding: 7px 7px 7px 7px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(8, 8, 8);
+  text-align: justify;
+}

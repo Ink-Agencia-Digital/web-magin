@@ -1,0 +1,77 @@
+.mensaje{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+}
+
+.usuarios{
+    background: var(--ion-color-tertiary);
+    color: #fff;
+}
+
+.mi-usuarios{
+  color: #fff;
+  background-color: rgb(139, 195, 74);
+  text-align: right;
+}
+
+.time {
+  color: #dfdfdf;
+  float: right;
+  font-size: small;
+  margin-left: 15px;
+}
+
+.msg-input{
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    background: #fff;
+    resize: none;
+    margin-top: 0px;
+    --padding-start: 8px;
+  }
+
+.msg-btn{
+  font-size: 30px;
+  color: white;
+  background-color: transparent;
+  margin: 5px 0px 0px 5px;
+}
+
+*{
+  font-family: 'Proxima Nova' !important;
+}
+
+.send {
+  background: #002a68;
+  text-align-last: center;
+  border-radius: 90%;
+  height: 50px;
+  max-width: 55px !important;
+}
+
+.message {
+  padding: 9px !important;
+  border-radius: 10px !important;
+  margin-bottom: 8px !important;
+  white-space: pre-wrap;
+  display: block;
+}
+
+.other-message.left {
+  float: left;
+  background-color: #2196f3 !important;
+  border: 1px solid #d4d4d4;
+  margin-right: 35% !important;
+  color: white;
+}
+
+.my-message.right {
+  float: right;
+  background-color: #8bc34a !important;
+  color: black !important;
+  border: 1px solid #d6d6d6;
+  margin-left: 35% !important;
+}

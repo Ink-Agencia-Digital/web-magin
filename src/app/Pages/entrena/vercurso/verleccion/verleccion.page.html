@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar class="ion-toolbar-ccs">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button (click)="volver()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="tituloInfo logo">
+      <label style="color: white;">MAGIN</label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="curso">
+    <div class="accordion-list" lines="none" detail="false" no-padding>
+        <ion-list lines="none" class="itemCssF list-md">
+          <div>
+            <ion-card style="border-radius: 10px;">
+              <ion-card-title align="center" [ngStyle]="{'color': color}" style="text-transform: uppercase;padding: 10px;"> {{ curso.name }}</ion-card-title>
+              <ion-card-content style="text-align: justify; color: black;font-size: 14px;">{{ curso.description }}</ion-card-content>
+              <div style="text-align: center;">
+                <ion-badge class="badge-go">¡Anímate!</ion-badge>
+              </div>
+
+              <div style="text-align-last: center;margin-top: 15px;">
+                <ion-button fill="outline" class="button-star" (click)="goContent()">
+                  <ion-icon name="play"></ion-icon>Iniciar Lección
+                </ion-button>
+              </div>
+              <ion-grid>
+              </ion-grid>
+            </ion-card>
+          </div>   
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

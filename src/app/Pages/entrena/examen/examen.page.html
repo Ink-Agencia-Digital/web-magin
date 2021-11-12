@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="ion-toolbar-ccs">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button defaultHref="/users/entrena/cursos-categorias"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="tituloInfo logo">
+      <label style="color: white;" class="color-blue">MAGIN</label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content align="center">
+  <div *ngFor="let ex of examenDT">
+    <ion-card align="center" style="margin: 0;">
+      <div style="margin: 15px 0px 0px 0px;text-align-last: center;">
+        <ion-badge color="primary" class="badge-title">Examen Final</ion-badge>
+      </div>
+
+      <ion-card-subtitle style="color: black; margin-top: 4%;margin-top: 10px;font-size: 16px;">{{ ex.p | capitalize }}</ion-card-subtitle>
+      <ion-card-content style="text-transform: capitalize; color: black;">
+        
+          <ion-item *ngFor="let optP of ex.op">
+            <ion-checkbox slot="end" color="primary" [(ngModel)]="optP.select" (click)="obtenerVal(ex.p,optP, ex.co)"></ion-checkbox>
+            <ion-label>{{ optP.dt | capitalize }}</ion-label>
+          </ion-item>
+  
+        <ion-button [disabled]="tama !== totalExam.length" (click)="calificar()" class="btn-submit"> 
+          <ion-icon name="pencil-outline" style="margin-left: 5px;"></ion-icon>Enviar mi respuesta
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

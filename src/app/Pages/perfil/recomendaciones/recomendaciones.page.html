@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="ion-toolbar-ccs">
+    <ion-buttons slot="start" style="font-size: 30px;color: white;" (click)="volver()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="tituloInfo logo">
+      <label style="color: white;">MAGIN</label>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Pagar con PayPal
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/paypal.png"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>MAGIN</ion-card-subtitle>
+      <ion-card-title>Contenido Premium</ion-card-title>
+      <ion-row>
+        <ion-col>
+          Total
+        </ion-col>
+        <ion-col>
+          {{currencyIcon}} {{paymentAmount}}
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="full" color="success" (click)="payWithPaypal()">Pagar con Paypal</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

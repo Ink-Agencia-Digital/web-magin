@@ -1,0 +1,113 @@
+<ion-header #header>
+  <ion-toolbar #toolbar class="ion-toolbar-ccs">
+    <div>
+      <ion-toolbar>
+        <ion-row class="logo">
+          <ion-col size="4">
+            <div class="icon-header">
+              <img src="/assets/finallogo.png" width="120" height="70">
+            </div>
+          </ion-col>
+          <ion-col size="8" style="align-self: flex-end">
+            <div class="info-header">
+              <ion-label *ngIf="nameUser" style="font-size: 14px;color: #fff;margin-right: 5px;">{{ message_header }}</ion-label>
+              <ion-label *ngIf="nameUser" style="font-size: 14px;color: #fff;text-transform: capitalize;">{{ nameUser }}</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar *ngIf="!notifications" [value]="searhVariable" placeholder="Busca más miembros de la comunidad MAGIN" animated (ionChange)="buscar($event)" style="padding: 0;"></ion-searchbar>
+
+  <ion-card style="margin: 5px 0px;" *ngIf="!notifications">
+
+    <ion-label *ngIf="data.length > 0" class="label-results">Resultados encontrados:</ion-label>
+    <ion-label *ngIf="textoBuscar && !filterList && data.length === 0" class="label-results">No se encontraron resultados</ion-label>
+
+    <ion-list *ngIf="data.length > 0">
+      <ion-item class="container friend" *ngFor="let userS of data">
+        <ion-avatar slot="start">
+          <img src="assets/avatar/{{userS.avatar}}.png" (click)="abrirMensajesBusqueda(userS)">
+        </ion-avatar>
+        <div class="user-list" (click)="abrirMensajesBusqueda(userS)">
+          <div style="display: flex;width: 100%;">
+            <ion-label color="primary" class="label-user-chat">{{userS.name}} {{userS.lastname}}</ion-label>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" (selectedIndexChange)="selectedIndexChange($event)">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <ion-card-title class="title-css">
+          <div style="display: flex;align-items: center;font-size: 18px;">
+            <ion-icon name="chatbubbles"></ion-icon>
+            <ion-label style="margin-left: 10px;">Chat</ion-label>
+          </div>
+        </ion-card-title>
+      </ng-template>
+
+      <ion-list style="padding: 0;">
+        <ion-item *ngFor="let cont of userList | filter:filterList" class="friend">
+          <ion-avatar slot="start" *ngIf="cont.usuario" >
+            <img src="assets/avatar/{{cont.usuario.avatar}}.png" (click)="abrirDialogo(cont)">
+          </ion-avatar>
+          <div class="user-list" (click)="abrirDialogo(cont)" *ngIf="cont.usuario">
+            <div style="display: flex;width: 100%;">
+              <ion-label color="primary" class="label-user-chat">{{cont.usuario.name}} {{cont.usuario.lastname}}</ion-label>
+              <ion-label *ngIf="cont.messagesReceptor.length > 0" class="label-date">{{ cont.messagesReceptor[cont.messagesReceptor.length-1].created_at | date: 'dd/MM/yyyy'}}</ion-label>
+            </div>
+            <ion-label *ngIf="cont.messagesReceptor.length > 0" class="label-message">{{ (cont.messagesReceptor[cont.messagesReceptor.length-1].message>50)? (cont.messagesReceptor[cont.messagesReceptor.length-1].message | slice:0:50)+'...':(cont.messagesReceptor[cont.messagesReceptor.length-1].message) }}</ion-label>
+          </div>
+        </ion-item>
+      </ion-list>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <ion-card-title class="title-css">
+          <div style="display: flex;align-items: center;font-size: 18px;">
+            <ion-icon name="notifications"></ion-icon>
+            <ion-label style="margin-left: 10px;">Notificaciones</ion-label>
+          </div>
+        </ion-card-title>
+      </ng-template>
+      <div class="container">
+        <ion-list *ngFor="let cont of userList">
+          <ion-item *ngIf="idUser == cont.transmitter.id && cont.receiver" class="friend">
+            <ion-avatar slot="start" class="author-image">
+              <img class="avatar" src="../../../assets/avatar/{{cont.receiver.avatar}}.png" class="imagestyle">
+            </ion-avatar>
+            <p class="user-list">
+              <strong>Agregaste a <span style="color: black; font-size: 15px;text-transform:capitalize;">{{cont.receiver.name}}&nbsp;{{cont.receiver.lastname}}</span> como amigo.</strong>
+            </p>
+          </ion-item>
+          <ion-item *ngIf="idUser !== cont.transmitter.id && cont.transmitter" class="friend">
+            <ion-avatar slot="start" class="author-image">
+              <img class="avatar" src="../../../assets/avatar/{{cont.transmitter.avatar}}.png" class="imagestyle"/>
+            </ion-avatar>
+            <p class="user-list">
+              <strong>El usuario <span style="color: black; font-size: 15px;text-transform:capitalize;">{{cont.transmitter.name}}&nbsp;{{cont.transmitter.lastname}}</span> te ha agregado como amigo. </strong>
+            </p>
+          </ion-item>
+          <ion-item *ngIf="idUser !== cont.transmitter.id && cont.transmitter" class="friend">
+            <ion-avatar slot="start" class="author-image">
+              <img class="avatar" src="../../../assets/avatar/{{cont.transmitter.avatar}}.png" class="imagestyle"/>
+            </ion-avatar>
+            <p class="user-list">
+              <strong>El usuario <span style="color: black; font-size: 15px;text-transform:capitalize;">{{cont.transmitter.name}}&nbsp;{{cont.transmitter.lastname}}</span> te ha enviado un mensaje. </strong>
+            </p>
+          </ion-item>
+        </ion-list>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</ion-content>

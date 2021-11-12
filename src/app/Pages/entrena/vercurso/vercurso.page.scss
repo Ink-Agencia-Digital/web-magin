@@ -1,0 +1,370 @@
+*{
+    font-family: 'Proxima Nova' !important;
+  }
+.msg-input{
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button-start{
+    width: 100%;
+}
+
+.video-responsive {
+    padding-top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+    
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    width: 100%;
+    height: 100%;
+}
+
+ion-card-subtitle {
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    padding: 0px 25px;
+}
+
+.icono-card {
+    zoom: 2 !important;
+}
+
+.msg-btn{
+    --padding-start: 8.5em;
+    --padding-end: 0.5em;
+}
+
+.imgStyle {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.divBack {
+    background-color:#ffffff;
+    margin-top:0px ;
+    padding: 0px 10px;
+}
+
+
+.usernamecss {
+    color: #000;
+    margin: 0px 25px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.mensajecss{
+    font-size: 14px;
+    line-height: 12px;
+    margin: 0px 25px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: black;
+}
+
+.divBack{
+    background-color: rgba(248, 249, 250, 0.527);
+}
+
+.rowcss{
+    padding: 0 0 0 0;
+    align-items: center;
+}
+
+.cursoName{
+    color: #444;
+    margin: 0;
+    padding: 0px 6px 6px 0px;
+    font-size: 14px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: #002a68 10px solid;
+}
+
+.lessonName{
+    font-size: 14px;
+    line-height: 12px;
+    margin: 0;
+    padding: 7px 7px 7px 7px;
+    text-transform: initial;
+    letter-spacing: -0.1px;
+    text-transform: lowercase;
+    color: black;
+    text-align: initial;
+}
+
+.lessonName p:first-letter {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+}
+.color-text{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+    white-space: break-spaces;
+    margin: 10px 5px;
+}
+.contentName{
+    font-size: 14px;
+    line-height: 12px;
+    margin: 0;
+    padding: 7px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+hr.dashed {
+    border-top: 3px dotted #bbb;
+}
+.contentNamedesc{
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: lowercase;
+    letter-spacing: -0.1px;
+    text-align: justify;
+    margin:20px;
+    font-weight: unset;
+}
+.button-lesson{
+    border:0px;
+}
+.lesson-content{
+    margin-left: 12%;
+}
+.child-item{
+    --ion-item-background: #f3f2f1;
+    --padding-start:  8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 2px;
+}
+
+.section{
+    --padding-start:  8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 2px;
+    --ion-item-background: #002a68;
+}
+
+.lecciones-active{
+    --ion-item-background: #eaeaea;
+    --padding-start: 8px;
+    margin-bottom: 2px;
+}
+
+.itemCssF{
+    --background: var(--ion-item-background, var(--ion-background-color, #f3f2f279)) !important;
+}
+
+.semi-circulo-2 {
+    width: 30px; 
+    height: 60px; 
+    position: absolute;
+    -moz-border-radius: 0 100px 100px 0;
+    -webkit-border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
+}
+
+.title-gen{
+    display: contents;
+}
+
+.tema-css {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #cac6c6;
+}
+
+.done {
+    border-left: 6px solid #4caf50 !important;
+}
+
+.fail {
+    border-left: 6px solid #f44336 !important;
+}
+
+.ion-item-css{
+    text-transform: capitalize !important;
+    align-items: left !important;
+    text-align: left !important;
+    background-color: #f6f6f685;
+    border: none;
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    border: 2px solid  #ffffff79;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    --background: rgba(255, 255, 255, 0.562) !important;
+    }
+
+.title-css {
+    text-align: center;
+    color: rgb(8, 8, 8);
+    padding: 0px 0px 6px 0px;
+    font-size: 16px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.Subtitle-css {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+    letter-spacing: 1px;
+    color: rgb(8, 8, 8);
+    text-align: justify;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+.card-3 {
+    background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+    border: white 2px outset;
+    margin: 10px;
+}
+     
+.title-gen {
+    display: contents;
+}
+
+.title-cat {
+    text-transform: uppercase;
+    text-align:center;
+    margin:0 0 1px;
+    
+}
+.title-emb p {
+    text-transform: lowercase;
+    text-align:center;
+    font-size: 16px;
+}
+
+
+.title-course {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-content {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: white;
+    margin-top: 3px;
+}
+
+.label-progress {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #002a68;
+}
+
+.send {
+    background: #002a68;
+    text-align-last: center;
+    border-radius: 90%;
+    height: 50px;
+    max-width: 50px !important;
+}
+
+.msg-btn {
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    margin: 7px 0px 0px 4px;
+}
+
+.icon-content {
+    color: black;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.card-description {
+    border-radius: 15px;
+    border-left: 4px solid;
+}
+
+.icon-description {
+    margin-right: 5px;
+    background: rgb(255 255 255);
+    color: #002a68;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+ion-progress-bar {
+    --buffer-background: #e4e4e4;
+    --progress-background: #002a68;
+}
+
+//rating
+.rating-list li {
+    float: right;
+    color: white;
+    padding: 0px 5px;
+    background-color: #002a68;
+    border-radius: 10px;
+    padding: 0px 5px;
+    margin: 0px 5px;
+}
+.rating-list li:hover,
+.rating-list li:hover ~ li, .rating-list li.selected {
+    color: #ffd700;
+    background-color: #002a68;
+    border-radius: 10px;
+    padding: 0px 5px;
+    margin: 0px 5px;
+}
+.rating-list {
+    display: inline-block;
+    list-style: none;
+}
+
+.div-rating {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.date-rating {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+}

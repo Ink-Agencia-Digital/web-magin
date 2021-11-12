@@ -1,0 +1,86 @@
+<ion-header #header>
+  <ion-toolbar #toolbar class="ion-toolbar-ccs">
+    <div>
+      <ion-toolbar>
+        <ion-row class="logo">
+          <ion-col size="4">
+            <div class="icon-header">
+              <img src="/assets/finallogo.png" width="120" height="70">
+            </div>
+          </ion-col>
+          <ion-col size="8" style="align-self: flex-end">
+            <div class="info-header">
+              <ion-label *ngIf="usertk" style="font-size: 14px;color: #fff;margin-right: 5px;">{{ message_header }}</ion-label>
+              <ion-label *ngIf="usertk" style="font-size: 14px;color: #fff;text-transform: capitalize;">{{usertk.name}}</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card-title class="title">¿Qué objetivos quieres alcanzar con nuestros programas?</ion-card-title>
+    <ion-card-subtitle class="subtitle">Organiza estos objetivos según tú interés y actualidad deportiva.</ion-card-subtitle>
+    
+    <div>
+      <ion-badge class="badge-instructions">Instrucciones:</ion-badge>
+      <div style="margin-left: 15px;">
+        <ion-label style="font-size: 13px;font-weight: 500;">
+          1. Lee atentamente los objetivos propuestos.
+        </ion-label>
+      </div>
+      <div style="margin-left: 15px;">
+        <ion-label style="font-size: 13px;font-weight: 500;">
+          2. Utiliza el icono azul que encuentras al inicio de cada objetivo para organizarlos.
+        </ion-label>
+      </div>
+      <div style="margin-left: 15px;">
+        <ion-label style="font-size: 13px;font-weight: 500;">
+          3. Desliza los objetivos conforme a tu prioridad.
+        </ion-label>
+      </div>
+      <div style="margin-left: 15px;">
+        <ion-label style="font-size: 13px;font-weight: 500;">
+          4. Después de organizar tus objetivos presiona finalizar.
+        </ion-label>
+      </div>
+
+      <div style="margin-left: 15px;margin: 10px;">
+        <ion-label style="font-size: 12px;font-weight: 500;color: #939393;">
+          *Nota. Estos objetivos podrás modificarlos posteriormente.
+        </ion-label>
+      </div>
+
+    </div>
+
+    <ion-list>
+      <ion-list-header style="font-size: 18px;font-weight: 500;background: #002a68;color: white;text-transform: uppercase;display: block;text-align: center; padding: 0;">
+        <ion-label>Objetivos</ion-label>
+      </ion-list-header>
+      <ion-reorder-group disabled="false" (ionItemReorder)="reorder($event)">
+        <ion-item *ngFor="let target of targets">
+          <ion-reorder>
+            <ion-icon name="medal-outline" class="icon-target"></ion-icon>
+          </ion-reorder>
+          <div style="margin-left: 10px;width:100%">
+            <ion-label class="label-target">
+              {{ target.target }}
+            </ion-label>
+          </div>
+        </ion-item>
+      </ion-reorder-group>
+    </ion-list>
+
+    <div style="text-align-last: center;">
+      <ion-button class="button-end" (click)="submit()">Finalizar</ion-button>
+    </div>
+  </div>
+
+  <ion-row class="no-content" *ngIf="targets.length === 0">
+    <ion-badge color="danger" class="badge-no-content">No existen objetivos</ion-badge>
+  </ion-row>
+
+</ion-content>

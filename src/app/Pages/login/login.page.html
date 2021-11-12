@@ -1,0 +1,43 @@
+<div  id="custom-overlay" [style.display]="splash ? 'flex' : 'none'">
+  <div  class="flb">
+      <div class="Aligner-item Aligner-item--top"></div>
+      <div class="container"></div>
+      <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-content class="ion-content-login" style="font-family: url(../src/assets/fonts/proxima/proxima-nova.otf);">
+    <img src="/assets/1024-solo-logo.png" >
+    <div>
+          <form [formGroup]="loginForm">
+            <ion-item class="ion-item-css">
+              <ion-icon name="people-sharp"></ion-icon>
+              &nbsp;&nbsp;
+              <ion-input name="email" type="email" placeholder="Correo" formControlName="correo" style="margin-right: 40px;"></ion-input>
+            </ion-item>
+            <ion-item class='form-text-error' *ngIf="!loginForm.controls.correo.valid && (loginForm.controls.correo.touched || loginForm.controls.correo.dirty)">
+              <ion-label class="l-error">El correo no es valido</ion-label>
+            </ion-item>
+            <ion-item class="ion-item-css">
+              <ion-icon name="lock-open-sharp"></ion-icon>
+              &nbsp;&nbsp;
+              <ion-input 
+                name="password" 
+                [type]="showpassword ? 'text' : 'password'" 
+                placeholder="Contraseña" 
+                formControlName="contrasena"></ion-input>
+                <ion-icon slot="end" [name]="passwordToggleIcon" (click)="showpass()"></ion-icon>
+            </ion-item>
+            <ion-item class='form-text-error' *ngIf="!loginForm.controls.contrasena.valid && (loginForm.controls.contrasena.touched || loginForm.controls.contrasena.dirty)">
+              <ion-label class="l-error">La Contraseña debe tener: <br>1 numero <br> 1 letra Mayúscula <br> 1 letra minúscula <br> y 8 o más caracteres</ion-label>
+            </ion-item>
+            <div class="center">
+
+              <ion-button class="button-css-Ingreso" type="submit"  (click)="login()" [disabled]="!loginForm.valid">Ingresar</ion-button>
+              <ion-button class="button-css"  (click)="olvidoc()" routerDirection="forward">¿Olvidaste Tu Contraseña?</ion-button>
+              <ion-button  class="button-css"  (click)="registro()" routerDirection="forward">¿No Tienes Una Cuenta?</ion-button>
+    
+            </div>
+        </form>
+      </div>
+</ion-content>
